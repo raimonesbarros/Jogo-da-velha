@@ -47,6 +47,12 @@ body{
   margin: 0 0.75em;
 }
 
+.play{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .p{
   color: #404040 !important;
   border: 2px solid #404040;

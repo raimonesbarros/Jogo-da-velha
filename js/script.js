@@ -7,6 +7,7 @@ const boxes=[...document.querySelectorAll(".box")];
 const play=[...document.querySelectorAll(".play")];
 const play1=document.querySelector(".play1");
 const play2=document.querySelector(".play2");
+const p=[...document.querySelectorAll(".p")];
 const p1=document.querySelector(".p1");
 const p2=document.querySelector(".p2");
 const ret=document.querySelector(".return");
@@ -19,21 +20,32 @@ let po=0;
 let vez="play1";
 let empate="sim";
 
+const zerar=()=>{
+  p.map((el)=>{
+    el.innerHTML=0
+    px=0
+    po=0
+  })
+  boxes.map((el)=>{
+    el.innerHTML=""
+  })
+}
+
 /* Trocar modo de jogo */
 vs.addEventListener("click",(evt)=>{
   const versus=document.querySelector(".vs")
   if(versus.innerHTML=="vs/Máquina"){
     vs.innerHTML="vs/Amigo(a)"
     level.classList.add("disable")
-    boxes.map((el)=>{
-      el.innerHTML=""
-    })
+    play1.innerHTML="Player X"
+    play2.innerHTML="Player O"
+    zerar()
   } else if(versus.innerHTML=="vs/Amigo(a)"){
     vs.innerHTML="vs/Máquina"
     level.classList.remove("disable")
-    boxes.map((el)=>{
-      el.innerHTML=""
-    })
+    play1.innerHTML="Você X"
+    play2.innerHTML="Robô O"
+    zerar()
   }
 })
 
@@ -63,12 +75,13 @@ boxes.map((el)=>{
       console.log("maquina moderado")
       /* Modo máquina moderada */
 
+
+
     } else if(vs.innerHTML=="vs/Máquina" && level.innerHTML=="Impossível"){
       console.log("maquina impossivel")
       /* Modo máquina impossível */
 
     } else if(vs.innerHTML=="vs/Amigo(a)"){
-      console.log("amigo")
       /* Modo amigo(a) */
       if(vez=="play1" && ver!="X" && ver!="O" && res[1]=="disable"){
         el.innerHTML="X"

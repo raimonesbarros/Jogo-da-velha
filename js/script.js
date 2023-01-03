@@ -139,9 +139,6 @@ level.addEventListener("click",(evt)=>{
   }
 })
 
-
-
-
 /* Jogar os modos de jogo */
 boxes.map((el,i)=>{
   el.innerHTML=""
@@ -185,7 +182,34 @@ boxes.map((el,i)=>{
         }
       } else if(vs.innerHTML=="vs/Máquina" && level.innerHTML=="Moderado"){
         /* Modo máquina Moderado */
-        
+        if(vez=="play1" && ver!="X" && ver!="O" && res[1]=="disable"){
+          el.innerHTML="X"
+          vez="play2"
+          play.map((el)=>{
+            el.classList.toggle("focus")
+          })
+          verifyX()
+          verifyE()
+
+          /* Modo automático */
+          const livres=[];
+          boxes.filter((el,i)=>{
+            const elemento=el.innerHTML
+            if(elemento==""){
+              livres.push(i)
+            }
+          })
+          console.log(livres)
+          const randomElement = livres[Math.floor(Math.random() * livres.length)];
+          console.log(randomElement)
+          boxes[randomElement].innerHTML="O"
+          vez="play1"
+          play.map((el)=>{
+            el.classList.toggle("focus")
+          })  
+          verifyO()
+          verifyE()
+        }
       }
 
     } else if(vs.innerHTML=="vs/Amigo(a)"){

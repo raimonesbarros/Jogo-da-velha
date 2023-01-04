@@ -130,14 +130,14 @@ vs.addEventListener("click",(evt)=>{
 })
 
 /* Trocar nivel de jogo */
-level.addEventListener("click",(evt)=>{
-  const nivel=document.querySelector(".level")
-  if(nivel.innerHTML=="Moderado"){
-    level.innerHTML="Impossível"
-  } else if(nivel.innerHTML=="Impossível"){
-    level.innerHTML="Moderado"
-  }
-})
+// level.addEventListener("click",()=>{
+//   const nivel=document.querySelector(".level")
+//   if(nivel.innerHTML=="Moderado"){
+//     level.innerHTML="Impossível"
+//   } else if(nivel.innerHTML=="Impossível"){
+//     level.innerHTML="Moderado"
+//   }
+// })
 
 /* Jogar os modos de jogo */
 boxes.map((el,i)=>{

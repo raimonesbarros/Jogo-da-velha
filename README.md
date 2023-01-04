@@ -70,11 +70,11 @@ Caixa de alerta exibe a vitória ou o empate.
 
 <h3> 🔮 Futures </h3>
 
+- Corrigir erros
 - Mudar layout
 - Implementar modos de jogo
   - Moderado
   - Impossível
-  - Corrigir erros
 
 ----
 

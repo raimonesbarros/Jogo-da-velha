@@ -75,12 +75,7 @@ const verifyO=()=>{
     po+=1;
     p2.innerHTML=po;
     empate="não";
-  }
-
-  if(vs.innerHTML=="vs/Máquina"){
     vez="play1";
-  } else if(vs.innerHTML=="vs/Amigo(a)"){
-    vez="play2";
     play.map((el)=>{
       el.classList.toggle("focus")
     })
@@ -104,10 +99,9 @@ const verifyE=()=>{
   if(vs.innerHTML=="vs/Máquina"){
     vez="play1";
     play.map((el)=>{
-      el.classList.toggle("focus")
     })
   } else if(vs.innerHTML=="vs/Amigo(a)"){
-    vez="play2";
+    el.classList.toggle("focus")
   }
 }
 
@@ -154,11 +148,11 @@ boxes.map((el,i)=>{
         if(vez=="play1" && ver!="X" && ver!="O" && res[1]=="disable"){
           el.innerHTML="X"
           vez="play2"
+          verifyX()
+          verifyE()
           play.map((el)=>{
             el.classList.toggle("focus")
           })
-          verifyX()
-          verifyE()
 
           /* Modo automático */
           const livres=[];
@@ -221,7 +215,6 @@ boxes.map((el,i)=>{
           el.classList.toggle("focus")
         })
         verifyX()
-        verifyE()
 
       } else if(vez=="play2" && ver!="X" && ver!="O" && res[1]=="disable"){
         el.innerHTML="O";
@@ -232,7 +225,7 @@ boxes.map((el,i)=>{
       }
       verifyO()
       verifyE()
-      
+
     }
   })
 })

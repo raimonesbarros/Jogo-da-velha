@@ -49,10 +49,6 @@ const verifyX =()=>{
     ret.classList.toggle("disable")
     px+=1;
     p1.innerHTML=px
-    vez="play1"
-    play.map((el)=>{
-      el.classList.toggle("focus")
-    })
     empate="não";
   }
 }
@@ -61,7 +57,7 @@ const verifyO=()=>{
   const buscar=boxes.map((el)=>{
     return el.innerHTML
   })
-  
+
   if(buscar[0]=="O" && buscar[1]=="O" && buscar[2]=="O"
   || buscar[3]=="O" && buscar[4]=="O" && buscar[5]=="O"
   || buscar[6]=="O" && buscar[7]=="O" && buscar[8]=="O"
@@ -75,10 +71,6 @@ const verifyO=()=>{
     po+=1;
     p2.innerHTML=po;
     empate="não";
-    vez="play1";
-    play.map((el)=>{
-      el.classList.toggle("focus")
-    })
   }
 }
 
@@ -86,7 +78,6 @@ const verifyE=()=>{
   const buscar=boxes.map((el)=>{
     return el.innerHTML
   })
-
   const res=[...ret.classList];
   
   if(buscar[0]!="" && buscar[1]!="" && buscar[2]!=""
@@ -94,14 +85,6 @@ const verifyE=()=>{
   && buscar[6]!="" && buscar[7]!="" && buscar[8]!="" && res[1]=="disable" && empate=="sim"){
     retText.innerHTML="EMPATE!"
     ret.classList.toggle("disable")
-  }
-
-  if(vs.innerHTML=="vs/Máquina"){
-    vez="play1";
-    play.map((el)=>{
-    })
-  } else if(vs.innerHTML=="vs/Amigo(a)"){
-    el.classList.toggle("focus")
   }
 }
 
@@ -111,14 +94,10 @@ vs.addEventListener("click",(evt)=>{
   if(versus.innerHTML=="vs/Máquina"){
     vs.innerHTML="vs/Amigo(a)"
     level.classList.add("disable")
-    play1.innerHTML="Player X"
-    play2.innerHTML="Player O"
     zerar()
   } else if(versus.innerHTML=="vs/Amigo(a)"){
     vs.innerHTML="vs/Máquina"
     level.classList.remove("disable")
-    play1.innerHTML="Você X"
-    play2.innerHTML="Robô O"
     zerar()
   }
 })
@@ -150,11 +129,7 @@ boxes.map((el,i)=>{
           vez="play2"
           verifyX()
           verifyE()
-          play.map((el)=>{
-            el.classList.toggle("focus")
-          })
 
-          /* Modo automático */
           const livres=[];
           boxes.filter((el,i)=>{
             const elemento=el.innerHTML
@@ -162,47 +137,17 @@ boxes.map((el,i)=>{
               livres.push(i)
             }
           })
-          console.log(livres)
-          const randomElement = livres[Math.floor(Math.random() * livres.length)];
-          console.log(randomElement)
-          boxes[randomElement].innerHTML="O"
-          vez="play1"
-          play.map((el)=>{
-            el.classList.toggle("focus")
-          })
-          verifyO()
-          verifyE()
-        
-        }
-      } else if(vs.innerHTML=="vs/Máquina" && level.innerHTML=="Moderado"){
-        /* Modo máquina Moderado */
-        if(vez=="play1" && ver!="X" && ver!="O" && res[1]=="disable"){
-          el.innerHTML="X"
-          vez="play2"
-          play.map((el)=>{
-            el.classList.toggle("focus")
-          })
-          verifyX()
-          verifyE()
+          if(res[1]=="disable" && livres.length>0 && empate=="sim"){
+            /* Modo automático */
+            const randomElement = livres[Math.floor(Math.random() * livres.length)];
+            boxes[randomElement].innerHTML="O"
+            vez="play1"
 
-          /* Modo automático */
-          const livres=[];
-          boxes.filter((el,i)=>{
-            const elemento=el.innerHTML
-            if(elemento==""){
-              livres.push(i)
-            }
-          })
-          console.log(livres)
-          const randomElement = livres[Math.floor(Math.random() * livres.length)];
-          console.log(randomElement)
-          boxes[randomElement].innerHTML="O"
-          vez="play1"
-          play.map((el)=>{
-            el.classList.toggle("focus")
-          })  
-          verifyO()
-          verifyE()
+            verifyO()
+            verifyE()
+            
+
+          }
         }
       }
 
@@ -237,5 +182,9 @@ btnok.addEventListener("click",(el)=>{
     el.innerHTML="";
     empate="sim";
   })
+  const evs=document.querySelector(".vs")
+  if(evs.innerHTML=="vs/Máquina"){
+    vez="play1";
+  }
   ret.classList.toggle("disable")
 })

@@ -140,8 +140,10 @@ boxes.map((el,i)=>{
           if(res[1]=="disable" && livres.length>0 && empate=="sim"){
             /* Modo automático */
             const randomElement = livres[Math.floor(Math.random() * livres.length)];
-            boxes[randomElement].innerHTML="O"
-            vez="play1"
+            setTimeout(()=>{
+              boxes[randomElement].innerHTML="O"
+              vez="play1"
+            }, 1000)
 
             verifyO()
             verifyE()

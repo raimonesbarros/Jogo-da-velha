@@ -143,7 +143,7 @@ boxes.map((el,i)=>{
             setTimeout(()=>{
               boxes[randomElement].innerHTML="O"
               vez="play1"
-            }, 1000)
+            }, 600)
 
             verifyO()
             verifyE()

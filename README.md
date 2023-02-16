@@ -1,7 +1,7 @@
 <h1> #️⃣ Jogo-da-velha </h1>
 <h3 align="center"> Projeto simples, nível iniciante, para fins de prática de conteúdo. </h3>
 <div align="center">
-
+<!--
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 </div>

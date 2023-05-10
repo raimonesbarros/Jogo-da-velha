@@ -1,16 +1,16 @@
 <h1> #️⃣ Jogo-da-velha </h1>
-<h3 align="center"> Jogo desenvolvido para fins de prática de conteúdo. </h3>
+<h3> Jogo desenvolvido para fins de prática de conteúdo. </h3>
 
 ----
 
-<h2> 💻 Tecnologias utilizadas: </h2>
 <div align="center">
+<h2> 💻 Tecnologias utilizadas: </h2>
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
   
   Com foco em:
   
-  ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 </div>
 
@@ -80,13 +80,4 @@ Caixa de alerta exibe a vitória ou o empate.
 <h2 align="center"> <a href = "https://raimonesbarros.github.io/Jogo-da-velha/" target="_blank"> 🎮 Ir para Jogo </a></h2>
 
 ----
-
-----
-
-<div align="center">
-<h3>🦟 Reportar Erro </h3>
-</br>
-<a href = "mailto:raimonesrsb@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
-</div>
-
 ----

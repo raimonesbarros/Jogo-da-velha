@@ -1,4 +1,4 @@
-<h1> #️⃣ Jogo-da-velha </h1>
+<h1> #️⃣ Jogo-da-velha :own </h1>
 <h3> Jogo desenvolvido para fins de prática de conteúdo. </h3>
 
 ----
@@ -7,9 +7,9 @@
 <h2> 💻 Tecnologias utilizadas: </h2>
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-  
+
   Com foco em:
-  
+
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 </div>
@@ -69,11 +69,15 @@ Caixa de alerta exibe a vitória ou o empate.
 
 <h3> 🔮 Futures </h3>
 
-- Corrigir erros
 - Mudar layout
 - Implementar modos de jogo
   - Moderado
   - Impossível
+
+----
+
+## Legenda
+:own - Projeto próprio
 
 ----
 
